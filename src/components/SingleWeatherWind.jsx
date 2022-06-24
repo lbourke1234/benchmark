@@ -14,7 +14,7 @@ const SingleWeatherWind = () => {
                 <Card.Text>Today's wind speed</Card.Text>
                 <Card.Text>{Math.ceil(data.list[0].wind.speed)} km/h</Card.Text>
               </Col>
-              <Col>
+              <Col className="d-flex justify-content-center align-items-center">
                 <i className="bi bi-wind"></i>
               </Col>
             </Row>

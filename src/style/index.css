@@ -37,3 +37,12 @@ body {
   padding: 25px;
   margin-bottom: -18px;
 }
+.bottom-left-cards .bi {
+  font-size: 80px;
+}
+.sidebar-icon-row .bi {
+  font-size: 50px;
+}
+.sidebar-card-body {
+  text-align: center;
+}

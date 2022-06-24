@@ -14,7 +14,7 @@ const SingleWeatherDescription = () => {
                 <Card.Text>Today feels like</Card.Text>
                 <Card.Text>{Math.ceil(data.list[0].main.feels_like)}°</Card.Text>
               </Col>
-              <Col>
+              <Col className="d-flex justify-content-center align-items-center">
                 <i className="bi bi-emoji-sunglasses"></i>
               </Col>
             </Row>

@@ -14,7 +14,7 @@ const SingleWeatherRain = () => {
                 <Card.Text>Today's humidity levels</Card.Text>
                 <Card.Text>{Math.ceil(data.list[0].main.humidity)}%</Card.Text>
               </Col>
-              <Col>
+              <Col className="d-flex justify-content-center align-items-center">
                 <i className="bi bi-image-alt"></i>
               </Col>
             </Row>

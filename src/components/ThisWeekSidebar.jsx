@@ -2,6 +2,8 @@ import { Card, Container, Row, Col } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 import SidebarListItem from './SidebarListItem'
 
+import { parseISO, format } from 'date-fns'
+
 const ThisWeekSidebar = () => {
   const daily = useSelector((state) => state.navBar.daily)
   const hourly = useSelector((state) => state.navBar.hourly)
@@ -10,35 +12,32 @@ const ThisWeekSidebar = () => {
     <>
       {hourly && (
         <Card className="sidebar-card-outer">
-          <Card.Body>
-            <Card.Title>This Week</Card.Title>
-            <Card.Text>Today</Card.Text>
+          <Card.Body className="sidebar-card-body">
+            <Card.Title className="mb-4">This Week</Card.Title>
             <Container>
               <Row className="sidebar-icon-row">
                 <Col className="sidebar-icon-col">
-                  <span>{hourly.list[0].dt_txt}</span>
+                  <span>{format(parseISO(hourly.list[0].dt_txt), 'dd-LL')}</span>
                   <i className="bi bi-sun"></i>
                   <span>{Math.ceil(hourly.list[0].main.temp)}°</span>
                 </Col>
                 <Col className="sidebar-icon-col">
-                  <span>{hourly.list[1].dt_txt}</span>
+                  <span>{format(parseISO(hourly.list[1].dt_txt), 'dd-LL')}</span>
                   <i className="bi bi-sun"></i>
                   <span>{Math.ceil(hourly.list[1].main.temp)}°</span>
                 </Col>
                 <Col className="sidebar-icon-col">
-                  <span>{hourly.list[2].dt_txt}</span>
+                  <span>{format(parseISO(hourly.list[2].dt_txt), 'dd-LL')}</span>
                   <i className="bi bi-sun"></i>
                   <span>{Math.ceil(hourly.list[2].main.temp)}°</span>
                 </Col>
                 <Col className="sidebar-icon-col">
-                  <span>{hourly.list[3].dt_txt}</span>
+                  <span>{format(parseISO(hourly.list[3].dt_txt), 'dd-LL')}</span>
                   <i className="bi bi-sun"></i>
                   <span>{Math.ceil(hourly.list[3].main.temp)}°</span>
                 </Col>
               </Row>
             </Container>
-            <Card.Link href="#">Card Link</Card.Link>
-            <Card.Link href="#">Another Link</Card.Link>
           </Card.Body>
         </Card>
       )}

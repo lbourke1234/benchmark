@@ -14,7 +14,7 @@ const SingleWeatherPressure = () => {
                 <Card.Text>Today's pressure</Card.Text>
                 <Card.Text>{Math.ceil(data.list[0].main.pressure)} hba</Card.Text>
               </Col>
-              <Col>
+              <Col className="d-flex justify-content-center align-items-center">
                 <i className="bi bi-cloud"></i>
               </Col>
             </Row>
